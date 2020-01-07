@@ -35,13 +35,13 @@ class Plane(object):
 
             basepoint_coords[initial_index] = c/initial_coefficient
             self.basepoint = Vector(basepoint_coords)
-
+            
         except Exception as e:
             if str(e) == Plane.NO_NONZERO_ELTS_FOUND_MSG:
                 self.basepoint = None
             else:
                 raise e
-
+        
 
     def __str__(self):
 
